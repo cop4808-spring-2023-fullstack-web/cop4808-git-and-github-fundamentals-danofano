@@ -1,4 +1,4 @@
-Dayaan Mazhar
+Name: Dayaan Mazhar
 
 # :wave: The Basics of GitHub 
 
