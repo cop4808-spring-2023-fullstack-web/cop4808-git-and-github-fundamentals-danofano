@@ -108,3 +108,13 @@ button {
 .percent:active {
     background-color: rgb(123, 189, 255);
 }
+
+/* Buttons background color change */
+.exponent, .sqrt, .log, .ln {
+    background-color: #7CFC00
+}
+
+/* When buttons are clicked on, background-color gets changed */
+.exponent:active, .sqrt:active, .log:active, .ln:active {
+    background-color: #ADFF2F
+}
