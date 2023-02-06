@@ -43,7 +43,7 @@ button {
     border-radius: 5%;
     border: none;
     font-weight: initial;
-    font-size: 2em;
+    font-size: 2em;          /* Font size remains same for all buttons including new ones */
     font-family: monospace;
     color: black;
 }
@@ -111,10 +111,11 @@ button {
 
 /* Buttons background color change */
 .exponent, .sqrt, .log, .ln {
-    background-color: #7CFC00
+    background-color: #7CFC00;
+    font-weight: bold;
 }
 
 /* When buttons are clicked on, background-color gets changed */
 .exponent:active, .sqrt:active, .log:active, .ln:active {
-    background-color: #ADFF2F
+    background-color: #ADFF2F;
 }
