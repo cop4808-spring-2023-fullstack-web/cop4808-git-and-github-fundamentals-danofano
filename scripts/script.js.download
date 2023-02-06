@@ -44,10 +44,13 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear')) {
                 clearDisplay();
                 updateDisplay();
-            } else if(buttons[i].classList.contains('ln')) {
+            } else if(buttons[i].classList.contains('ln')) {   // functionality for natural log 
                 inputNaturalLog(displayValue);
                 updateDisplay();
-            }
+            } else if(buttons[i].classList.contains('log')) {  // functionality for log
+                inputLog(displayValue);
+                updateDisplay();
+            } 
         }
     )}
 }
@@ -162,6 +165,10 @@ function clearDisplay() {
 
 function inputNaturalLog(num) {
     displayValue = (Math.log(num)).toString();
+}
+
+function inputLog(num) {
+    displayValue = (Math.log10(num)).toString();
 }
 
 function inputBackspace() {
