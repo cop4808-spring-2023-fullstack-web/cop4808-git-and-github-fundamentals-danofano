@@ -50,7 +50,10 @@ function clickButton() {
             } else if(buttons[i].classList.contains('log')) {  // functionality for log
                 inputLog(displayValue);
                 updateDisplay();
-            } 
+            } else if(buttons[i].classList.contains('sqrt')) {  // functionality for square root
+                inputSqrt(displayValue);
+                updateDisplay();
+            }
         }
     )}
 }
@@ -163,12 +166,19 @@ function clearDisplay() {
     result = null;
 }
 
+// natural log
 function inputNaturalLog(num) {
     displayValue = (Math.log(num)).toString();
 }
 
+// log base 10
 function inputLog(num) {
     displayValue = (Math.log10(num)).toString();
+}
+
+// square root
+function inputSqrt(num) {
+    displayValue = (Math.sqrt(num)).toString();
 }
 
 function inputBackspace() {
