@@ -14,4 +14,5 @@ The buttons and their functionality that was added to the calculator include:
 ## Video Demo
 #
 Here is a gif showing the implementation of the calculator:
+
 <img src = "Calculator.gif" alt = "Unable to display">
