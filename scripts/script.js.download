@@ -1,4 +1,4 @@
-let displayValue = '0';
+let displayValue = 0;
 let firstOperand = null;
 let secondOperand = null;
 let firstOperator = null;
@@ -15,6 +15,7 @@ function updateDisplay() {
     const display = document.getElementById('display');
     display.innerText = displayValue;
     if(displayValue.length > 9) {
+        console.log(displayValue.length)
         display.innerText = displayValue.substring(0, 9);
     }
 }
@@ -72,16 +73,28 @@ function inputOperand(operand) {
             //starts new operation after inputEquals()
             displayValue = operand;
         } else {
-            displayValue += operand;
+            displayValue = operand;
         }
     } else {
         //3rd/5th click - inputs to secondOperand
-        if(displayValue === firstOperand) {
+        // will only execute when you are entering the operand after the operator
+        if (checkSecOperand() == true)
+            displayValue += operand;
+        else if (displayValue === firstOperand) {
+            secondOperand = displayValue;
             displayValue = operand;
-        } else {
+        }             
+        else {
             displayValue += operand;
         }
     }
+}
+
+function checkSecOperand() {
+    if (secondOperand !== null)
+        return true;
+    else
+        return false;
 }
 
 function inputOperator(operator) {
