@@ -103,7 +103,8 @@ function inputOperator(operator) {
         secondOperator = operator;
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), firstOperator);
-        displayValue = roundAccurately(result, 15).toString();
+        // passed 10 in the argument of roundAccurately instead of 15 which fixed the issue of entering 9 digit numbers and getting a wrong output
+        displayValue = roundAccurately(result, 10).toString();  
         firstOperand = displayValue;
         result = null;
     } else if(firstOperator != null && secondOperator != null) {
@@ -111,7 +112,7 @@ function inputOperator(operator) {
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), secondOperator);
         secondOperator = operator;
-        displayValue = roundAccurately(result, 15).toString();
+        displayValue = roundAccurately(result, 10).toString();
         firstOperand = displayValue;
         result = null;
     } else { 
@@ -132,7 +133,7 @@ function inputEquals() {
         if(result === 'lmao') {
             displayValue = 'lmao';
         } else {
-            displayValue = roundAccurately(result, 15).toString();
+            displayValue = roundAccurately(result, 10).toString();
             firstOperand = displayValue;
             secondOperand = null;
             firstOperator = null;
@@ -146,7 +147,7 @@ function inputEquals() {
         if(result === 'lmao') {
             displayValue = 'lmao';
         } else {
-            displayValue = roundAccurately(result, 15).toString();
+            displayValue = roundAccurately(result, 10).toString();
             firstOperand = displayValue;
             secondOperand = null;
             firstOperator = null;
