@@ -53,16 +53,16 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear')) {
                 clearDisplay();
                 updateDisplay();
-            } else if(buttons[i].classList.contains('ln')) {   // functionality for natural log 
+            } else if(document.querySelector(`button[data-key='${'n'}']`)) {   // functionality for natural log 
                 inputNaturalLog(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('log')) {  // functionality for log
+            } else if(document.querySelector(`button[data-key='${'l'}']`)) {  // functionality for log
                 inputLog(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('sqrt')) {  // functionality for square root
+            } else if(document.querySelector(`button[data-key='${'s'}']`)) {  // functionality for square root
                 inputSqrt(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('exponent')) {  // functionality for power of 2
+            } else if(document.querySelector(`button[data-key='${'e'}']`)) {  // functionality for power of 2
                 inputExponent(displayValue);
                 updateDisplay();
             }
