@@ -1,4 +1,4 @@
-let displayValue = 0;
+let displayValue = '0';
 let firstOperand = null;
 let secondOperand = null;
 let firstOperator = null;
@@ -22,6 +22,9 @@ function updateDisplay() {
   
 updateDisplay();
 
+
+// To select from data-key: document.querySelector([`[data-key="${"="}"]`]) 
+// buttons[i].classList.contains('operand'))
 function clickButton() {
     for(let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function() {
@@ -69,9 +72,11 @@ function inputOperand(operand) {
         if(displayValue === '0' || displayValue === 0) {
             //1st click - handles first operand input
             displayValue = operand;
+            firstOperand = displayValue;
         } else if(displayValue === firstOperand) {
             //starts new operation after inputEquals()
-            displayValue = operand;
+            displayValue += operand;
+            firstOperand = displayValue;
         } else {
             displayValue = operand;
         }
