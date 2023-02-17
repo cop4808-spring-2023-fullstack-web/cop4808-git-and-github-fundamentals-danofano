@@ -14,3 +14,7 @@ The buttons and their functionality that was added to the calculator include:
 Here is a gif showing the implementation of the calculator:
 
 <img src = "Calculator.gif" alt = "Unable to display">
+<br><br>
+Here is another gif showing the updated functionality of the calculator such as doing calculations like 2 times 22222 or 333*33333 or even something simple as 40 - 10. Also, these operations are being done by using the keyboard keys only:
+<br><br>
+<img src = "Calculator-updated.gif" alt = "Unable to display">
