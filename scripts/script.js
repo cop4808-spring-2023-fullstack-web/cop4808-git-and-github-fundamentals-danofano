@@ -88,7 +88,7 @@ function inputOperand(operand) {
     } else {
         //3rd/5th click - inputs to secondOperand
         // will only execute when you are entering the operand after the operator
-        if (checkSecOperand() == true)
+        if (secondOperand !== null)
             displayValue += operand;
         else if (displayValue === firstOperand) {
             secondOperand = displayValue;
@@ -100,12 +100,6 @@ function inputOperand(operand) {
     }
 }
 
-function checkSecOperand() {
-    if (secondOperand !== null)
-        return true;
-    else
-        return false;
-}
 
 function inputOperator(operator) {
     if(firstOperator != null && secondOperator === null) {
